@@ -12,6 +12,7 @@
        
       <br/><br/>
     <div class ="table">
+      <form action="UpdatePlayer.jsp" method="post">
       <table border="1">
         <tr>
           <th>Id</th>
@@ -25,11 +26,11 @@
           <td>${player.name}</td>
           <td>${player.nationality}</td>
           <td><input type="text" name="club" id ="club" value=""/></td>
-          <form action="${pageContext.request.contextPath }/players/update/${player.id}/${param.club}"><input type="submit" value ="Modifier" class ="btn btn-lg btn-primary"/></form>
-          
         </tr>
         
       </table>
+      </form>
+       <form action="${pageContext.request.contextPath }/players/update/${player.id}/${PageScope.club}"><input type="submit" value ="Modifier" class ="btn btn-lg btn-primary"/></form>
     </div>
        
    </body>
