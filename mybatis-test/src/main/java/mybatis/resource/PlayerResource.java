@@ -98,7 +98,7 @@ public class PlayerResource {
 		 return new ModelAndView("redirect:" + listeUrl);
 	}
 	
-	//modification d'un joueur en entrant le nom du joueur et son nouveau club dans l'url
+	//modification d'un joueur, marche pas ptdr
 	@RequestMapping("/update/{id}")
 	public String update(@PathVariable("id") int id, Model model) {
 		model.addAttribute("Player",playerMapper.findById(id));
